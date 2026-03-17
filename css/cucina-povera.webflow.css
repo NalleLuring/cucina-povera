@@ -727,7 +727,7 @@ figcaption {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  max-width: 357px;
+  max-width: 680px;
   display: flex;
 }
 
@@ -2581,7 +2581,7 @@ figcaption {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
-    max-width: 380px;
+    max-width: 680px;
   }
 
   .max-width-full-mobile-portrait {
