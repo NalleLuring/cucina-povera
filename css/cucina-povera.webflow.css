@@ -2068,6 +2068,10 @@ figcaption {
     z-index: 99;
   }
 
+  .black_82 {
+    opacity: .9;
+  }
+
   .meny, .boka {
     height: 100svh;
   }
