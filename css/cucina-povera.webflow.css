@@ -2072,6 +2072,10 @@ figcaption {
     opacity: .9;
   }
 
+  .chambre, .meny, .boka, .best-ll, .oppetider {
+    z-index: 1000;
+  }
+
   .meny, .boka {
     height: 100svh;
   }
