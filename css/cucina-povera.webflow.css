@@ -1349,7 +1349,8 @@ figcaption {
 
 .nav_logo {
   width: auto;
-  height: 2.5rem;
+  height: 3.75rem;
+  object-fit: contain;
 }
 
 .nav_menu {
@@ -1471,7 +1472,8 @@ figcaption {
 
 .nav_fixed {
   z-index: 999;
-  width: 270px;
+  width: 405px;
+  max-width: 92vw;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
@@ -2780,4 +2782,12 @@ figcaption {
   }
 }
 
-
+/* Mellan 992px och ~1092px ligger navigationslanken "Bestall" sa nara mitten att
+   den forstorade loggan annars overlappar den. Har krymps loggan precis sa mycket
+   som behovs, och vaxer smidigt tillbaka till full storlek (3.75rem) fran ~1092px.
+   Nedre gransen 2.5rem nas aldrig i praktiken - loggan blir aldrig mindre an forr. */
+@media screen and (min-width: 992px) and (max-width: 1092px) {
+  .nav_logo {
+    height: clamp(2.5rem, (100vw - 791px) / 4.887, 3.75rem);
+  }
+}
