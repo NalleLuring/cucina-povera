@@ -303,17 +303,6 @@ margin: 0rem !important;
         </div>
         <div class="black_82"></div>
       </div>
-      <div id="meny_div" class="meny">
-        <div class="container-nav-links z-index-2 boka-div">
-          <div class="container-nav-links align-center is-vertikal">
-            <a href="documents/cucina_lunch.pdf" class="button w-button">Lunch</a>
-          </div>
-          <div class="container-nav-links align-center is-vertikal">
-            <a href="documents/cucina_kvall.pdf" class="button w-button">Middag</a>
-          </div>
-        </div>
-        <div class="black_82"></div>
-      </div>
       <div id="boka_div" class="boka">
         <div class="w-layout-vflex flex-block-2">
           <div class="container-nav-links z-index-2 is-vertikal">
@@ -374,9 +363,9 @@ margin: 0rem !important;
             <div class="hero_grid">
               <div id="w-node-_7e25027e-09e6-b51f-38fb-1904bdb07208-bf6e543b" class="container-nav-links only-desk">
                 <div class="nav_menu">
-                  <div id="meny" class="nav_menu_link">
+                  <a id="meny" href="documents/cucina_meny.pdf" target="_blank" rel="noopener" class="nav_menu_link" style="color:inherit;text-decoration:none">
                     <h3 id="meny_text" class="nav-menu-text">Meny</h3><img src="images/→.svg" loading="lazy" alt="" class="arrow">
-                  </div>
+                  </a>
                   <div id="boka" class="nav_menu_link">
                     <h3 id="boka_text" class="nav-menu-text">Boka</h3><img src="images/→.svg" loading="lazy" alt="" class="arrow">
                   </div>
@@ -604,12 +593,10 @@ margin: 0rem !important;
     <script>document.addEventListener('DOMContentLoaded', function() {
     let activeElement = null;
     function resetAll() {
-        document.getElementById('meny_div').style.display = 'none';
         document.getElementById('oppetider_div').style.display = 'none';
         document.getElementById('boka_div').style.display = 'none';
         document.getElementById('bestall_div').style.display = 'none';
         document.getElementById('chambre_div').style.display = 'none'; // <--- för chambre
-        document.getElementById('meny_text').style.borderColor = 'transparent';
         document.getElementById('oppetider_text').style.borderColor = 'transparent';
         document.getElementById('boka_text').style.borderColor = 'transparent';
         document.getElementById('bestall_text').style.borderColor = 'transparent';
@@ -625,9 +612,6 @@ margin: 0rem !important;
             activeElement = clickedId;
         }
     }
-    document.getElementById('meny').addEventListener('click', function() {
-        handleClick('meny');
-    });
     document.getElementById('oppetider').addEventListener('click', function() {
         handleClick('oppetider');
     });
@@ -644,9 +628,6 @@ margin: 0rem !important;
         resetAll();
     });
     document.getElementById('oppetider_div').addEventListener('click', function(e) {
-        if (e.target.tagName !== 'A') resetAll();
-    });
-    document.getElementById('meny_div').addEventListener('click', function(e) {
         if (e.target.tagName !== 'A') resetAll();
     });
     document.getElementById('boka_div').addEventListener('click', function(e) {
