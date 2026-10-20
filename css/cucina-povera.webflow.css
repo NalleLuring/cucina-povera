@@ -2791,3 +2791,9 @@ figcaption {
     height: clamp(2.5rem, (100vw - 791px) / 4.887, 3.75rem);
   }
 }
+
+@media screen and (min-width: 992px) {
+  .footer-left {
+    text-align: left;
+  }
+}
