@@ -2797,3 +2797,9 @@ figcaption {
     text-align: left;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .footer-email {
+    align-self: center;
+  }
+}
