@@ -1,0 +1,116 @@
+/* Popup: Cucina Povera flyttar till Odengatan 43 (visas t.o.m. 17/11 2026, se skript i index.html) */
+
+.move-popup {
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  inset: 0;
+}
+
+.move-popup.is-open {
+  display: flex;
+}
+
+.move-popup_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  padding: 48px 40px 40px;
+  background-color: #f9f9f9;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  color: #6d1800;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.move-popup_close {
+  display: flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+
+/* Sajtens globala img-regel sätter width/height: 100% */
+.move-popup_close img {
+  width: 18px;
+  height: 17.3063px;
+}
+
+.move-popup_arrow {
+  flex-shrink: 0;
+  width: 24px;
+  height: 12.0852px;
+}
+
+.move-popup_heading {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.move-popup_address {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  font-size: 18px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.move-popup_old {
+  color: rgba(109, 24, 0, 0.45);
+  text-decoration: line-through;
+}
+
+.move-popup_new {
+  font-weight: 700;
+}
+
+.move-popup_text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.move-popup_button {
+  padding: 16px 24px;
+  border: 0;
+  background-color: #6d1800;
+  color: #f9f9f9;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .move-popup_card {
+    row-gap: 16px;
+    max-width: 350px;
+    padding: 60px 24px 28px;
+  }
+
+  .move-popup_heading {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .move-popup_address {
+    font-size: 16px;
+  }
+}
